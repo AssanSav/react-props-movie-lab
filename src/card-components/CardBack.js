@@ -12,19 +12,23 @@ export default class CardBack extends Component {
 
   generateRatingElement = () => {
     // console.log(this.props.IMDBRating)
+    // console.log(imgMapper)
     if (this.props.IMDBRating === null) {
       return (
         <h4>No Rating Found</h4>
       )
     } else {
       return (
-        <img src={imgMapper} alt=""></img>
+        <img src={imgMapper[this.props.IMDBRating]} alt=""></img>
       )
     }
   }
 
   render() {
-    console.log(this.props.genres)
+    console.log(this.props)
+    // console.log("genres", this.props.genres)
+    // console.log("title", this.props.title)
+    // console.log("IMDBRating", this.props.IMDBRating)
     return (
       <div className="card-back">
         <h3 className="title">{this.props.title}</h3>
